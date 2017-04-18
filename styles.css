@@ -2,8 +2,6 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
-  margin:0px;
-  padding:0px;
 }
 
 #input, .button-small, .button-large {
@@ -19,8 +17,9 @@ body {
 
 #input {
   color: white;
-  position:relative;
-  top: 30px;
+  position:absolute;
+  top: 20px;
+  width:584;
   margin:20px;
   overflow: hidden;
   height: 40px;
@@ -30,7 +29,13 @@ body {
 #case {
   display:block;
   margin:auto;
-  width:416px;
+  width: 416px;
+  height: 624px;
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-box-shadow: 7px 7px 33px -5px rgba(0,0,0,0.54);
+  -moz-box-shadow: 7px 7px 33px -5px rgba(0,0,0,0.54);
+  box-shadow: 7px 7px 33px -5px rgba(0,0,0,0.54);
 }
 
 .button-small {
@@ -43,7 +48,10 @@ body {
 
 .button-small:hover {
   background-color:#64b5f6;
-  
+  z-index:2;
+  -webkit-box-shadow: inset 5px 5px 21px -3px rgba(0,0,0,0.39);
+  -moz-box-shadow: inset 5px 5px 21px -3px rgba(0,0,0,0.39);
+  box-shadow: inset 5px 5px 21px -3px rgba(0,0,0,0.39);
 }
 
 .button-large {
@@ -56,6 +64,9 @@ body {
 
 .button-large:hover {
   background-color:#ff94c2;
+  -webkit-box-shadow: inset 5px 5px 21px -3px rgba(0,0,0,0.39);
+  -moz-box-shadow: inset 5px 5px 21px -3px rgba(0,0,0,0.39);
+  box-shadow: inset 5px 5px 21px -3px rgba(0,0,0,0.39);
 }
 
 .functions {
