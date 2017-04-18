@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <meta charset="utf-8">
+
+  <title>Template</title>
+    
+  <meta name="Cale Argan" content="Portfolio">
+  
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+  <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+
+<body>
+  <div id="case">
+    
+  <div id="input-screen"><p id="input"></p></div>
+  <div id="1" class="number button button-small"><p>1</p></div>
+  <div id="2" class="number button button-small"><p>2</p></div>
+  <div id="3" class="number button button-small"><p>3</p></div>
+  <div id="divide" class="button button-small functions"><p>/</div>
+  <br class="clear">
+  <div id="4" class="number button button-small"><p>4</p></div>
+  <div id="5" class="number button button-small"><p>5</p></div>
+  <div id="6" class="number button button-small"><p>6</p></div>
+  <div id="times" class="button button-small functions"><p>*</p></div>
+  <br class="clear">
+  <div id="7" class="number button button-small"><p>7</p></div>
+  <div id="8" class="number button button-small"><p>8</p></div>
+  <div id="9" class="number button button-small"><p>9</p></div>
+  <div id="minus" class="button button-small functions"><p>-</p></div>
+  <br class="clear">
+  <div id="decimal" class="number button button-small"><p>.</p></div>
+  <div id="0" class="number button button-small"><p>0</p></div>
+  <div id="equals" class="button button-small"><p>=</p></div>
+  <div id="plus" class="button button-small functions"><p>+</p></div>
+  <br class="clear">
+  <div id="clear" class="button button-large"><p>clear</p></div>
+  <div id="backspace" class="button button-large"><p>back</p></div>
+  <br class="clear">
+  <div><p id="small-text">Thanks for checking out my Calculator!</p></div>
+    
+  </div><!--case-->
+  
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script src="JS/script.js"></script>
+  
+  <script>
+$( document ).ready(function() {
+  
+  let string = '';
+  let current = '';
+  let result = 0;
+  
+  
+  $(".button").click(function(){
+    
+    if ($('p',this).html() === "clear") {
+      string = '';
+      $("#input").html("");
+    } else if ($('p',this).html() === "=") {
+      string = eval(string);
+      $("#input").html(string);
+    } else if ($('p',this).html() === "back") {
+      string = string.toString().slice(0,-1);
+      $("#input").html(string);
+    } else {
+      current = $('p',this).html();
+      string += current;
+      $("#input").html(string);
+    };
+    
+  });
+  
+}); /*Document ready function*/
+    
+  </script>
+</body>
+</html>
